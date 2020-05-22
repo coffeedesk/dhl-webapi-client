@@ -1,0 +1,17 @@
+{
+  "name": "coffeedesk/dhl-webapi-client",
+  "type": "library",
+  "description": "DHL WebApi client",
+  "require": {
+    "php": ">=5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "DHLClient\\": "src/"
+    }
+  },
+  "require-dev": {
+    "wsdl2phpgenerator/wsdl2phpgenerator": "^3.4",
+    "phpunit/phpunit": "^5"
+  }
+}
