@@ -6,12 +6,16 @@ use DHLClient\Model\ArrayOfItemtolabeldata;
 use DHLClient\Model\ArrayOfItemtoprint;
 use DHLClient\Model\ArrayOfShipmentfulldata;
 use DHLClient\Model\ArrayOfString;
+use DHLClient\Model\CreateShipmentRequest;
+use DHLClient\Model\DeleteShipmentRequest;
 
 interface ClientInterface
 {
     public function __construct($userName = null, $password = null, $wsdl = null);
 
     public function getVersion();
+
+    public function createShipment(CreateShipmentRequest $shipmentRequest);
 
     public function createShipments(ArrayOfShipmentfulldata $shipments);
 
@@ -24,6 +28,8 @@ interface ClientInterface
         $shipmentOrderInfo,
         $courierWithLabel
     );
+
+    public function deleteShipment(DeleteShipmentRequest $shipmentRequest);
 
     public function deleteShipments(ArrayOfString $shipments);
 

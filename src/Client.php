@@ -9,7 +9,11 @@ use DHLClient\Model\ArrayOfString;
 use DHLClient\Model\AuthData;
 use DHLClient\Model\bookCourier;
 use DHLClient\Model\cancelCourierBooking;
+use DHLClient\Model\createShipment;
+use DHLClient\Model\CreateShipmentRequest;
 use DHLClient\Model\createShipments;
+use DHLClient\Model\deleteShipment;
+use DHLClient\Model\DeleteShipmentRequest;
 use DHLClient\Model\deleteShipments;
 use DHLClient\Model\DHL24WebapiService;
 use DHLClient\Model\getInternationalParams;
@@ -26,7 +30,6 @@ use DHLClient\Model\getShipmentScan;
 use DHLClient\Model\getTrackAndTraceInfo;
 use DHLClient\Model\getVersion;
 use DHLClient\Model\PnpRequest;
-use DHLClient\Model\ShipmentFullData;
 
 class Client implements ClientInterface
 {
@@ -65,6 +68,13 @@ class Client implements ClientInterface
         return $this->service->getVersion(new getVersion());
     }
 
+    public function createShipment(CreateShipmentRequest $shipmentRequest)
+    {
+        $shipment = new createShipment($this->authData, $shipmentRequest);
+
+        return $this->service->createShipment($shipment);
+    }
+
     /**
      * @param ArrayOfShipmentfulldata $shipments
      * @return Model\createShipmentsResponse
@@ -97,6 +107,13 @@ class Client implements ClientInterface
         );
 
         return $this->service->bookCourier($bookCourier);
+    }
+
+    public function deleteShipment(DeleteShipmentRequest $shipmentRequest)
+    {
+        $shipment = new deleteShipment($this->authData, $shipmentRequest);
+
+        return $this->service->deleteShipment($shipment);
     }
 
     public function deleteShipments(ArrayOfString $shipments)
