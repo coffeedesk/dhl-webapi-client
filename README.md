@@ -1,6 +1,6 @@
 # dhl-webapi-client
 
-#Generate PHP classes from WSDL
+## Generate PHP classes from WSDL
 To generate PHP classes from DHL WSDL file we used wsdl2phpgenerator package:
 `https://github.com/wsdl2phpgenerator/wsdl2phpgenerator` 
 
