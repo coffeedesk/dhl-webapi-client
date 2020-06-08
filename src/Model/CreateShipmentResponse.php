@@ -6,12 +6,12 @@ class createShipmentResponse
 {
 
     /**
-     * @var CreateShipmentResponse $createShipmentResult
+     * @var \DHLClient\Model\Response\CreateShipmentResponse $createShipmentResult
      */
     protected $createShipmentResult = null;
 
     /**
-     * @param CreateShipmentResponse $createShipmentResult
+     * @param \DHLClient\Model\Response\CreateShipmentResponse $createShipmentResult
      */
     public function __construct($createShipmentResult)
     {
@@ -19,7 +19,7 @@ class createShipmentResponse
     }
 
     /**
-     * @return CreateShipmentResponse
+     * @return \DHLClient\Model\Response\CreateShipmentResponse
      */
     public function getCreateShipmentResult()
     {
@@ -27,7 +27,7 @@ class createShipmentResponse
     }
 
     /**
-     * @param CreateShipmentResponse $createShipmentResult
+     * @param \DHLClient\Model\Response\CreateShipmentResponse $createShipmentResult
      * @return \DHLClient\Model\createShipmentResponse
      */
     public function setCreateShipmentResult($createShipmentResult)
