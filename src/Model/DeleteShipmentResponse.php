@@ -6,12 +6,12 @@ class deleteShipmentResponse
 {
 
     /**
-     * @var DeleteShipmentResponse $deleteShipmentResult
+     * @var \DHLClient\Model\Response\DeleteShipmentResponse $deleteShipmentResult
      */
     protected $deleteShipmentResult = null;
 
     /**
-     * @param DeleteShipmentResponse $deleteShipmentResult
+     * @param \DHLClient\Model\Response\DeleteShipmentResponse $deleteShipmentResult
      */
     public function __construct($deleteShipmentResult)
     {
@@ -19,7 +19,7 @@ class deleteShipmentResponse
     }
 
     /**
-     * @return DeleteShipmentResponse
+     * @return \DHLClient\Model\Response\DeleteShipmentResponse
      */
     public function getDeleteShipmentResult()
     {
@@ -27,7 +27,7 @@ class deleteShipmentResponse
     }
 
     /**
-     * @param DeleteShipmentResponse $deleteShipmentResult
+     * @param \DHLClient\Model\Response\DeleteShipmentResponse $deleteShipmentResult
      * @return \DHLClient\Model\deleteShipmentResponse
      */
     public function setDeleteShipmentResult($deleteShipmentResult)

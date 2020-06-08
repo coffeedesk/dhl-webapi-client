@@ -95,7 +95,7 @@
         'DHLClient\Model\createShipmentResponse' => __DIR__ .'/createShipmentResponse.php',
         'DHLClient\Model\DeleteShipmentRequest' => __DIR__ .'/DeleteShipmentRequest.php',
         'DHLClient\Model\deleteShipment' => __DIR__ .'/deleteShipment.php',
-        'DHLClient\Model\DeleteShipmentResponse' => __DIR__ .'/DeleteShipmentResponse.php',
+        'DHLClient\Model\Response\DeleteShipmentResponse' => __DIR__ .'/Response/DeleteShipmentResponse.php',
         'DHLClient\Model\deleteShipmentResponse' => __DIR__ .'/deleteShipmentResponse.php',
         'DHLClient\Model\GetNearestServicepointsRequest' => __DIR__ .'/GetNearestServicepointsRequest.php',
         'DHLClient\Model\getNearestServicepoints' => __DIR__ .'/getNearestServicepoints.php',

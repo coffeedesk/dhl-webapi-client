@@ -99,7 +99,7 @@ class DHL24WebapiService extends \SoapClient
         'createShipmentResponse' => 'DHLClient\\Model\\createShipmentResponse',
         'DeleteShipmentRequest' => 'DHLClient\\Model\\DeleteShipmentRequest',
         'deleteShipment' => 'DHLClient\\Model\\deleteShipment',
-        'DeleteShipmentResponse' => 'DHLClient\\Model\\DeleteShipmentResponse',
+        'DeleteShipmentResponse' => 'DHLClient\\Model\\Response\\DeleteShipmentResponse',
         'deleteShipmentResponse' => 'DHLClient\\Model\\deleteShipmentResponse',
         'GetNearestServicepointsRequest' => 'DHLClient\\Model\\GetNearestServicepointsRequest',
         'getNearestServicepoints' => 'DHLClient\\Model\\getNearestServicepoints',
