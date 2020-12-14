@@ -42,8 +42,8 @@ class Client implements ClientInterface
     /** @var string|null */
     private $password;
 
-    /** @var AuthData|null */
-    private $authData = null;
+    /** @var AuthData */
+    private $authData;
 
     /** @var DHL24WebapiService */
     private $service;
