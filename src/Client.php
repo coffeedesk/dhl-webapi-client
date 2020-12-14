@@ -30,6 +30,7 @@ use DHLClient\Model\getShipmentScan;
 use DHLClient\Model\getTrackAndTraceInfo;
 use DHLClient\Model\getVersion;
 use DHLClient\Model\PnpRequest;
+use DHLClient\Model\ShipmentOrderInfo;
 
 class Client implements ClientInterface
 {
@@ -63,11 +64,18 @@ class Client implements ClientInterface
         $this->service = new DHL24WebapiService([], $wsdl);
     }
 
+    /**
+     * @return Model\getVersionResponse
+     */
     public function getVersion()
     {
         return $this->service->getVersion(new getVersion());
     }
 
+    /**
+     * @param CreateShipmentRequest $shipmentRequest
+     * @return Model\createShipmentResponse
+     */
     public function createShipment(CreateShipmentRequest $shipmentRequest)
     {
         $shipment = new createShipment($this->authData, $shipmentRequest);
@@ -86,6 +94,16 @@ class Client implements ClientInterface
         return $this->service->createShipments($createShipments);
     }
 
+    /**
+     * @param string $pickupDate
+     * @param string $pickupTimeFrom
+     * @param string $pickupTimeTo
+     * @param string $additionalInfo
+     * @param ArrayOfString $shipmentIdList
+     * @param ShipmentOrderInfo $shipmentOrderInfo
+     * @param boolean $courierWithLabel
+     * @return Model\bookCourierResponse
+     */
     public function bookCourier(
         $pickupDate,
         $pickupTimeFrom,
@@ -109,6 +127,10 @@ class Client implements ClientInterface
         return $this->service->bookCourier($bookCourier);
     }
 
+    /**
+     * @param DeleteShipmentRequest $shipmentRequest
+     * @return Model\deleteShipmentResponse
+     */
     public function deleteShipment(DeleteShipmentRequest $shipmentRequest)
     {
         $shipment = new deleteShipment($this->authData, $shipmentRequest);
@@ -116,6 +138,10 @@ class Client implements ClientInterface
         return $this->service->deleteShipment($shipment);
     }
 
+    /**
+     * @param ArrayOfString $shipments
+     * @return Model\deleteShipmentsResponse
+     */
     public function deleteShipments(ArrayOfString $shipments)
     {
         $deleteShipments = new deleteShipments($this->authData, $shipments);
@@ -123,6 +149,10 @@ class Client implements ClientInterface
         return $this->service->deleteShipments($deleteShipments);
     }
 
+    /**
+     * @param ArrayOfString $orders
+     * @return Model\cancelCourierBookingResponse
+     */
     public function cancelCourierBooking(ArrayOfString $orders)
     {
         $cancelCourierBooking = new cancelCourierBooking($this->authData, $orders);
@@ -130,6 +160,12 @@ class Client implements ClientInterface
         return $this->service->cancelCourierBooking($cancelCourierBooking);
     }
 
+    /**
+     * @param string $createdFrom
+     * @param string $createdTo
+     * @param int $offset
+     * @return Model\getMyShipmentsResponse
+     */
     public function getMyShipments($createdFrom, $createdTo, $offset)
     {
         $getMyShipments = new getMyShipments($this->authData, $createdFrom, $createdTo, $offset);
@@ -137,6 +173,11 @@ class Client implements ClientInterface
         return $this->service->getMyShipments($getMyShipments);
     }
 
+    /**
+     * @param string $createdFrom
+     * @param string $createdTo
+     * @return Model\getMyShipmentsCountResponse
+     */
     public function getMyShipmentsCount($createdFrom, $createdTo)
     {
         $getMyShipmentsCount = new getMyShipmentsCount($this->authData, $createdFrom, $createdTo);
@@ -144,6 +185,10 @@ class Client implements ClientInterface
         return $this->service->getMyShipmentsCount($getMyShipmentsCount);
     }
 
+    /**
+     * @param ArrayOfItemtoprint $items
+     * @return Model\getLabelsResponse
+     */
     public function getLabels(ArrayOfItemtoprint $items)
     {
         $labels = new getLabels($this->authData, $items);
@@ -151,6 +196,10 @@ class Client implements ClientInterface
         return $this->service->getLabels($labels);
     }
 
+    /**
+     * @param ArrayOfItemtolabeldata $items
+     * @return Model\getLabelsDataResponse
+     */
     public function getLabelsData(ArrayOfItemtolabeldata $items)
     {
         $labelsData = new getLabelsData($this->authData, $items);
@@ -158,6 +207,11 @@ class Client implements ClientInterface
         return $this->service->getLabelsData($labelsData);
     }
 
+    /**
+     * @param string $date
+     * @param string $type
+     * @return Model\getPnpResponse|mixed
+     */
     public function getPnp($date, $type)
     {
         $pnpRequest = new PnpRequest();
@@ -170,6 +224,10 @@ class Client implements ClientInterface
         return $this->service->getPnp($method);
     }
 
+    /**
+     * @param string $shipmentId
+     * @return Model\getShipmentScanResponse
+     */
     public function getShipmentScan($shipmentId)
     {
         $method = new getShipmentScan($this->authData, $shipmentId);
@@ -177,6 +235,11 @@ class Client implements ClientInterface
         return $this->service->getShipmentScan($method);
     }
 
+    /**
+     * @param string $postCode
+     * @param string $pickupDate
+     * @return Model\getPostalCodeServicesResponse
+     */
     public function getPostalCodeServices($postCode, $pickupDate)
     {
         $method = new getPostalCodeServices($this->authData, $postCode, $pickupDate);
@@ -184,6 +247,9 @@ class Client implements ClientInterface
         return $this->service->getPostalCodeServices($method);
     }
 
+    /**
+     * @return Model\getReturnParamsResponse
+     */
     public function getReturnParams()
     {
         $method = new getReturnParams($this->authData);
@@ -191,6 +257,10 @@ class Client implements ClientInterface
         return $this->service->getReturnParams($method);
     }
 
+    /**
+     * @param string $shipmentId
+     * @return Model\getTrackAndTraceInfoResponse
+     */
     public function getTrackAndTraceInfo($shipmentId)
     {
         $tracking = new getTrackAndTraceInfo($this->authData, $shipmentId);
@@ -198,6 +268,13 @@ class Client implements ClientInterface
         return $this->service->getTrackAndTraceInfo($tracking);
     }
 
+    /**
+     * @param string $city
+     * @param string $postCode
+     * @param string $country
+     * @param int $radius
+     * @return Model\getNearestServicepointsResponse
+     */
     public function getNearestServicepoints($city, $postCode, $country, $radius)
     {
         $request = new GetNearestServicepointsRequest();
@@ -211,6 +288,9 @@ class Client implements ClientInterface
         return $this->service->getNearestServicepoints($method);
     }
 
+    /**
+     * @return Model\getInternationalParamsResponse
+     */
     public function getInternationalParams()
     {
         $method = new getInternationalParams($this->authData);
