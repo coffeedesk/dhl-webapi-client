@@ -48,7 +48,7 @@ class Client implements ClientInterface
     /** @var DHL24WebapiService */
     private $service;
 
-    public function __construct($username = null, $password = null, $wsdl = null)
+    public function __construct($username = null, $password = null, $wsdl = null, $options = [])
     {
         if (!$wsdl) {
             $wsdl = self::WSDL_URL;
@@ -61,7 +61,7 @@ class Client implements ClientInterface
         $this->authData->setUsername($username);
         $this->authData->setPassword($password);
 
-        $this->service = new DHL24WebapiService([], $wsdl);
+        $this->service = new DHL24WebapiService($options, $wsdl);
     }
 
     /**
@@ -296,5 +296,13 @@ class Client implements ClientInterface
         $method = new getInternationalParams($this->authData);
 
         return $this->service->getInternationalParams($method);
+    }
+
+    /**
+     * @return DHL24WebapiService
+     */
+    public function getService()
+    {
+        return $this->service;
     }
 }

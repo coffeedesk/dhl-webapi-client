@@ -8,11 +8,12 @@ use DHLClient\Model\ArrayOfShipmentfulldata;
 use DHLClient\Model\ArrayOfString;
 use DHLClient\Model\CreateShipmentRequest;
 use DHLClient\Model\DeleteShipmentRequest;
+use DHLClient\Model\DHL24WebapiService;
 use DHLClient\Model\ShipmentOrderInfo;
 
 interface ClientInterface
 {
-    public function __construct($userName = null, $password = null, $wsdl = null);
+    public function __construct($userName = null, $password = null, $wsdl = null, $options = []);
 
     /**
      * @return Model\getVersionResponse
@@ -140,4 +141,9 @@ interface ClientInterface
      * @return Model\getInternationalParamsResponse
      */
     public function getInternationalParams();
+
+    /**
+     * @return DHL24WebapiService
+     */
+    public function getService();
 }
