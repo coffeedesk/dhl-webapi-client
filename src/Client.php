@@ -4,13 +4,16 @@ namespace DHLClient;
 
 use DHLClient\Model\ArrayOfItemtolabeldata;
 use DHLClient\Model\ArrayOfItemtoprint;
+use DHLClient\Model\ArrayOfReturnitemtoprint;
 use DHLClient\Model\ArrayOfShipmentfulldata;
 use DHLClient\Model\ArrayOfString;
 use DHLClient\Model\AuthData;
 use DHLClient\Model\bookCourier;
 use DHLClient\Model\cancelCourierBooking;
+use DHLClient\Model\CreateReturnShipmentRequest;
 use DHLClient\Model\createShipment;
 use DHLClient\Model\CreateShipmentRequest;
+use DHLClient\Model\createShipmentReturn;
 use DHLClient\Model\createShipments;
 use DHLClient\Model\deleteShipment;
 use DHLClient\Model\DeleteShipmentRequest;
@@ -25,6 +28,7 @@ use DHLClient\Model\getNearestServicepoints;
 use DHLClient\Model\GetNearestServicepointsRequest;
 use DHLClient\Model\getPnp;
 use DHLClient\Model\getPostalCodeServices;
+use DHLClient\Model\getReturnByWaybill;
 use DHLClient\Model\getReturnParams;
 use DHLClient\Model\getShipmentScan;
 use DHLClient\Model\getTrackAndTraceInfo;
@@ -81,6 +85,17 @@ class Client implements ClientInterface
         $shipment = new createShipment($this->authData, $shipmentRequest);
 
         return $this->service->createShipment($shipment);
+    }
+
+    /**
+     * @param CreateReturnShipmentRequest $returnShipmentRequest
+     * @return Model\createShipmentReturnResponse
+     */
+    public function createShipmentReturn(CreateReturnShipmentRequest $returnShipmentRequest)
+    {
+        $returnShipment = new createShipmentReturn($this->authData, $returnShipmentRequest);
+
+        return $this->service->createShipmentReturn($returnShipment);
     }
 
     /**
@@ -296,6 +311,17 @@ class Client implements ClientInterface
         $method = new getInternationalParams($this->authData);
 
         return $this->service->getInternationalParams($method);
+    }
+
+    /**
+     * @param ArrayOfReturnitemtoprint $items
+     * @return Model\getReturnByWaybillResponse
+     */
+    public function getReturnByWaybill(ArrayOfReturnitemtoprint $items)
+    {
+        $method = new getReturnByWaybill($this->authData, $items);
+
+        return $this->service->getReturnByWaybill($method);
     }
 
     /**

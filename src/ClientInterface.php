@@ -4,8 +4,10 @@ namespace DHLClient;
 
 use DHLClient\Model\ArrayOfItemtolabeldata;
 use DHLClient\Model\ArrayOfItemtoprint;
+use DHLClient\Model\ArrayOfReturnitemtoprint;
 use DHLClient\Model\ArrayOfShipmentfulldata;
 use DHLClient\Model\ArrayOfString;
+use DHLClient\Model\CreateReturnShipmentRequest;
 use DHLClient\Model\CreateShipmentRequest;
 use DHLClient\Model\DeleteShipmentRequest;
 use DHLClient\Model\DHL24WebapiService;
@@ -25,6 +27,12 @@ interface ClientInterface
      * @return Model\createShipmentResponse
      */
     public function createShipment(CreateShipmentRequest $shipmentRequest);
+
+    /**
+     * @param CreateReturnShipmentRequest $returnShipmentRequest
+     * @return Model\createShipmentReturnResponse
+     */
+    public function createShipmentReturn(CreateReturnShipmentRequest $returnShipmentRequest);
 
     /**
      * @param ArrayOfShipmentfulldata $shipments
@@ -141,6 +149,12 @@ interface ClientInterface
      * @return Model\getInternationalParamsResponse
      */
     public function getInternationalParams();
+
+    /**
+     * @param ArrayOfReturnitemtoprint $items
+     * @return Model\getReturnByWaybillResponse
+     */
+    public function getReturnByWaybill(ArrayOfReturnitemtoprint $items);
 
     /**
      * @return DHL24WebapiService
