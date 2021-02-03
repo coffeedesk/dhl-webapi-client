@@ -141,7 +141,7 @@ interface ClientInterface
      * @param string $postCode
      * @param string $country
      * @param int $radius
-     * @return Model\getNearestServicepointsResponse
+     * @return Model\GetNearestServicepointsResponse
      */
     public function getNearestServicepoints($city, $postCode, $country, $radius);
 

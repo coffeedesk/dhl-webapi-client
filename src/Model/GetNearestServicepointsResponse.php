@@ -28,7 +28,7 @@ class GetNearestServicepointsResponse
 
     /**
      * @param GetNearestServicepointsResponse $getNearestServicepointsResult
-     * @return \DHLClient\Model\getNearestServicepointsResponse
+     * @return \DHLClient\Model\GetNearestServicepointsResponse
      */
     public function setGetNearestServicepointsResult($getNearestServicepointsResult)
     {

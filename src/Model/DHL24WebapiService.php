@@ -343,7 +343,7 @@ class DHL24WebapiService extends \SoapClient
      * Pobieranie najbliższych punktów serwisowych typu Last Mile bez COD
      *
      * @param getNearestServicepoints $parameters
-     * @return getNearestServicepointsResponse
+     * @return GetNearestServicepointsResponse
      */
     public function getNearestServicepoints(getNearestServicepoints $parameters)
     {
