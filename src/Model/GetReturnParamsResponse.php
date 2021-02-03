@@ -28,7 +28,7 @@ class GetReturnParamsResponse
 
     /**
      * @param GetReturnParamsResponse $getReturnParamsResult
-     * @return \DHLClient\Model\getReturnParamsResponse
+     * @return \DHLClient\Model\GetReturnParamsResponse
      */
     public function setGetReturnParamsResult($getReturnParamsResult)
     {

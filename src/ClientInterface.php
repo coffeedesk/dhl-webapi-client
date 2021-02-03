@@ -126,7 +126,7 @@ interface ClientInterface
     public function getPostalCodeServices($postCode, $pickupDate);
 
     /**
-     * @return Model\getReturnParamsResponse
+     * @return Model\GetReturnParamsResponse
      */
     public function getReturnParams();
 

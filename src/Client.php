@@ -263,7 +263,7 @@ class Client implements ClientInterface
     }
 
     /**
-     * @return Model\getReturnParamsResponse
+     * @return Model\GetReturnParamsResponse
      */
     public function getReturnParams()
     {
