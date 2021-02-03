@@ -96,7 +96,7 @@ class DHL24WebapiService extends \SoapClient
         'ArrayOfPackage' => 'DHLClient\\Model\\ArrayOfPackage',
         'CreateShipmentRequest' => 'DHLClient\\Model\\CreateShipmentRequest',
         'createShipment' => 'DHLClient\\Model\\createShipment',
-        'createShipmentResponse' => 'DHLClient\\Model\\createShipmentResponse',
+        'CreateShipmentResponse' => 'DHLClient\\Model\\CreateShipmentResponse',
         'DeleteShipmentRequest' => 'DHLClient\\Model\\DeleteShipmentRequest',
         'deleteShipment' => 'DHLClient\\Model\\deleteShipment',
         'DeleteShipmentResponse' => 'DHLClient\\Model\\Response\\DeleteShipmentResponse',
@@ -321,7 +321,7 @@ class DHL24WebapiService extends \SoapClient
      * Definiowanie przesyłki w systemie DHL - metoda agregująca
      *
      * @param createShipment $parameters
-     * @return createShipmentResponse
+     * @return CreateShipmentResponse
      */
     public function createShipment(createShipment $parameters)
     {

@@ -92,7 +92,7 @@
         'DHLClient\Model\ArrayOfPackage' => __DIR__ .'/ArrayOfPackage.php',
         'DHLClient\Model\CreateShipmentRequest' => __DIR__ .'/CreateShipmentRequest.php',
         'DHLClient\Model\createShipment' => __DIR__ .'/createShipment.php',
-        'DHLClient\Model\createShipmentResponse' => __DIR__ .'/createShipmentResponse.php',
+        'DHLClient\Model\CreateShipmentResponse' => __DIR__ .'/CreateShipmentResponse.php',
         'DHLClient\Model\DeleteShipmentRequest' => __DIR__ .'/DeleteShipmentRequest.php',
         'DHLClient\Model\deleteShipment' => __DIR__ .'/deleteShipment.php',
         'DHLClient\Model\Response\DeleteShipmentResponse' => __DIR__ .'/Response/DeleteShipmentResponse.php',

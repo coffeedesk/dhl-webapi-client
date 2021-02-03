@@ -78,7 +78,7 @@ class Client implements ClientInterface
 
     /**
      * @param CreateShipmentRequest $shipmentRequest
-     * @return Model\createShipmentResponse
+     * @return Model\CreateShipmentResponse
      */
     public function createShipment(CreateShipmentRequest $shipmentRequest)
     {

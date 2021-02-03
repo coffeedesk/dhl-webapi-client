@@ -28,7 +28,7 @@ class CreateShipmentResponse
 
     /**
      * @param \DHLClient\Model\Response\CreateShipmentResponse $createShipmentResult
-     * @return \DHLClient\Model\createShipmentResponse
+     * @return \DHLClient\Model\CreateShipmentResponse
      */
     public function setCreateShipmentResult($createShipmentResult)
     {
