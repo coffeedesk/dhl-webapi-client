@@ -2,7 +2,7 @@
 
 namespace DHLClient\Model;
 
-class getInternationalParamsResponse
+class GetInternationalParamsResponse
 {
 
     /**
