@@ -29,7 +29,7 @@ class DHL24WebapiService extends \SoapClient
         'ArrayOfReturnitemtoprint' => 'DHLClient\\Model\\ArrayOfReturnitemtoprint',
         'getReturnByWaybill' => 'DHLClient\\Model\\getReturnByWaybill',
         'Label' => 'DHLClient\\Model\\Label',
-        'CreateShipmentResponse' => 'DHLClient\\Model\\Response\\CreateShipmentResponse',
+        'CreateShipmentResult' => 'DHLClient\\Model\\Response\\CreateShipmentResult',
         'ArrayOfCreateshipmentresponse' => 'DHLClient\\Model\\ArrayOfCreateshipmentresponse',
         'getReturnByWaybillResponse' => 'DHLClient\\Model\\getReturnByWaybillResponse',
         'Billing' => 'DHLClient\\Model\\Billing',

@@ -25,7 +25,7 @@
         'DHLClient\Model\ArrayOfReturnitemtoprint' => __DIR__ .'/ArrayOfReturnitemtoprint.php',
         'DHLClient\Model\getReturnByWaybill' => __DIR__ .'/getReturnByWaybill.php',
         'DHLClient\Model\Label' => __DIR__ .'/Label.php',
-        'DHLClient\Model\Response\CreateShipmentResponse' => __DIR__ .'/Response/CreateShipmentResponse.php',
+        'DHLClient\Model\Response\CreateShipmentResult' => __DIR__ . '/Response/CreateShipmentResult.php',
         'DHLClient\Model\ArrayOfCreateshipmentresponse' => __DIR__ .'/ArrayOfCreateshipmentresponse.php',
         'DHLClient\Model\getReturnByWaybillResponse' => __DIR__ .'/getReturnByWaybillResponse.php',
         'DHLClient\Model\Billing' => __DIR__ .'/Billing.php',
