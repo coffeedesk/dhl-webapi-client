@@ -304,7 +304,7 @@ class Client implements ClientInterface
     }
 
     /**
-     * @return Model\getInternationalParamsResponse
+     * @return Model\GetInternationalParamsResponse
      */
     public function getInternationalParams()
     {

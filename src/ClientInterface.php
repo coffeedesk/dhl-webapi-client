@@ -146,7 +146,7 @@ interface ClientInterface
     public function getNearestServicepoints($city, $postCode, $country, $radius);
 
     /**
-     * @return Model\getInternationalParamsResponse
+     * @return Model\GetInternationalParamsResponse
      */
     public function getInternationalParams();
 

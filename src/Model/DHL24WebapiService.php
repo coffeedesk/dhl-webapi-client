@@ -354,7 +354,7 @@ class DHL24WebapiService extends \SoapClient
      * Pobieranie informacji o możliwościach przesyłek międzynarodowych
      *
      * @param getInternationalParams $parameters
-     * @return getInternationalParamsResponse
+     * @return GetInternationalParamsResponse
      */
     public function getInternationalParams(getInternationalParams $parameters)
     {
