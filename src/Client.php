@@ -78,7 +78,7 @@ class Client implements ClientInterface
 
     /**
      * @param CreateShipmentRequest $shipmentRequest
-     * @return Model\createShipmentResponse
+     * @return Model\CreateShipmentResponse
      */
     public function createShipment(CreateShipmentRequest $shipmentRequest)
     {
@@ -144,7 +144,7 @@ class Client implements ClientInterface
 
     /**
      * @param DeleteShipmentRequest $shipmentRequest
-     * @return Model\deleteShipmentResponse
+     * @return Model\DeleteShipmentResponse
      */
     public function deleteShipment(DeleteShipmentRequest $shipmentRequest)
     {
@@ -263,7 +263,7 @@ class Client implements ClientInterface
     }
 
     /**
-     * @return Model\getReturnParamsResponse
+     * @return Model\GetReturnParamsResponse
      */
     public function getReturnParams()
     {
@@ -288,7 +288,7 @@ class Client implements ClientInterface
      * @param string $postCode
      * @param string $country
      * @param int $radius
-     * @return Model\getNearestServicepointsResponse
+     * @return Model\GetNearestServicepointsResponse
      */
     public function getNearestServicepoints($city, $postCode, $country, $radius)
     {
@@ -304,7 +304,7 @@ class Client implements ClientInterface
     }
 
     /**
-     * @return Model\getInternationalParamsResponse
+     * @return Model\GetInternationalParamsResponse
      */
     public function getInternationalParams()
     {

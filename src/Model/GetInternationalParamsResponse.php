@@ -28,7 +28,7 @@ class GetInternationalParamsResponse
 
     /**
      * @param GetInternationalParamsResponse $getInternationalParamsResult
-     * @return \DHLClient\Model\getInternationalParamsResponse
+     * @return \DHLClient\Model\GetInternationalParamsResponse
      */
     public function setGetInternationalParamsResult($getInternationalParamsResult)
     {

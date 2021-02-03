@@ -6,7 +6,7 @@ namespace DHLClient\Model\Response;
 
 use DHLClient\Model\Label;
 
-class CreateShipmentResponse
+class CreateShipmentResult
 {
     /** @var string */
     protected $shipmentNotificationNumber;

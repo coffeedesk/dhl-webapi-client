@@ -24,7 +24,7 @@ interface ClientInterface
 
     /**
      * @param CreateShipmentRequest $shipmentRequest
-     * @return Model\createShipmentResponse
+     * @return Model\CreateShipmentResponse
      */
     public function createShipment(CreateShipmentRequest $shipmentRequest);
 
@@ -62,7 +62,7 @@ interface ClientInterface
 
     /**
      * @param DeleteShipmentRequest $shipmentRequest
-     * @return Model\deleteShipmentResponse
+     * @return Model\DeleteShipmentResponse
      */
     public function deleteShipment(DeleteShipmentRequest $shipmentRequest);
 
@@ -126,7 +126,7 @@ interface ClientInterface
     public function getPostalCodeServices($postCode, $pickupDate);
 
     /**
-     * @return Model\getReturnParamsResponse
+     * @return Model\GetReturnParamsResponse
      */
     public function getReturnParams();
 
@@ -141,12 +141,12 @@ interface ClientInterface
      * @param string $postCode
      * @param string $country
      * @param int $radius
-     * @return Model\getNearestServicepointsResponse
+     * @return Model\GetNearestServicepointsResponse
      */
     public function getNearestServicepoints($city, $postCode, $country, $radius);
 
     /**
-     * @return Model\getInternationalParamsResponse
+     * @return Model\GetInternationalParamsResponse
      */
     public function getInternationalParams();
 

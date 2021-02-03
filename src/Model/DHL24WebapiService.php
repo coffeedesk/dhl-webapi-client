@@ -29,7 +29,7 @@ class DHL24WebapiService extends \SoapClient
         'ArrayOfReturnitemtoprint' => 'DHLClient\\Model\\ArrayOfReturnitemtoprint',
         'getReturnByWaybill' => 'DHLClient\\Model\\getReturnByWaybill',
         'Label' => 'DHLClient\\Model\\Label',
-        'CreateShipmentResponse' => 'DHLClient\\Model\\Response\\CreateShipmentResponse',
+        'CreateShipmentResult' => 'DHLClient\\Model\\Response\\CreateShipmentResult',
         'ArrayOfCreateshipmentresponse' => 'DHLClient\\Model\\ArrayOfCreateshipmentresponse',
         'getReturnByWaybillResponse' => 'DHLClient\\Model\\getReturnByWaybillResponse',
         'Billing' => 'DHLClient\\Model\\Billing',
@@ -96,11 +96,11 @@ class DHL24WebapiService extends \SoapClient
         'ArrayOfPackage' => 'DHLClient\\Model\\ArrayOfPackage',
         'CreateShipmentRequest' => 'DHLClient\\Model\\CreateShipmentRequest',
         'createShipment' => 'DHLClient\\Model\\createShipment',
-        'createShipmentResponse' => 'DHLClient\\Model\\createShipmentResponse',
+        'CreateShipmentResponse' => 'DHLClient\\Model\\CreateShipmentResponse',
         'DeleteShipmentRequest' => 'DHLClient\\Model\\DeleteShipmentRequest',
         'deleteShipment' => 'DHLClient\\Model\\deleteShipment',
-        'DeleteShipmentResponse' => 'DHLClient\\Model\\Response\\DeleteShipmentResponse',
-        'deleteShipmentResponse' => 'DHLClient\\Model\\deleteShipmentResponse',
+        'DeleteShipmentResult' => 'DHLClient\\Model\\Response\\DeleteShipmentResult',
+        'DeleteShipmentResponse' => 'DHLClient\\Model\\DeleteShipmentResponse',
         'GetNearestServicepointsRequest' => 'DHLClient\\Model\\GetNearestServicepointsRequest',
         'getNearestServicepoints' => 'DHLClient\\Model\\getNearestServicepoints',
         'SearchAddress' => 'DHLClient\\Model\\SearchAddress',
@@ -321,7 +321,7 @@ class DHL24WebapiService extends \SoapClient
      * Definiowanie przesyłki w systemie DHL - metoda agregująca
      *
      * @param createShipment $parameters
-     * @return createShipmentResponse
+     * @return CreateShipmentResponse
      */
     public function createShipment(createShipment $parameters)
     {
@@ -332,7 +332,7 @@ class DHL24WebapiService extends \SoapClient
      * Usuwanie przesyłki w systemie DHL - metoda agregująca
      *
      * @param deleteShipment $parameters
-     * @return deleteShipmentResponse
+     * @return DeleteShipmentResponse
      */
     public function deleteShipment(deleteShipment $parameters)
     {
@@ -343,7 +343,7 @@ class DHL24WebapiService extends \SoapClient
      * Pobieranie najbliższych punktów serwisowych typu Last Mile bez COD
      *
      * @param getNearestServicepoints $parameters
-     * @return getNearestServicepointsResponse
+     * @return GetNearestServicepointsResponse
      */
     public function getNearestServicepoints(getNearestServicepoints $parameters)
     {
@@ -354,7 +354,7 @@ class DHL24WebapiService extends \SoapClient
      * Pobieranie informacji o możliwościach przesyłek międzynarodowych
      *
      * @param getInternationalParams $parameters
-     * @return getInternationalParamsResponse
+     * @return GetInternationalParamsResponse
      */
     public function getInternationalParams(getInternationalParams $parameters)
     {
@@ -365,7 +365,7 @@ class DHL24WebapiService extends \SoapClient
      * Pobieranie informacji o możliwościach przesyłek międzynarodowych
      *
      * @param getReturnParams $parameters
-     * @return getReturnParamsResponse
+     * @return GetReturnParamsResponse
      */
     public function getReturnParams(getReturnParams $parameters)
     {
