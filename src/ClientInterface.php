@@ -62,7 +62,7 @@ interface ClientInterface
 
     /**
      * @param DeleteShipmentRequest $shipmentRequest
-     * @return Model\deleteShipmentResponse
+     * @return Model\DeleteShipmentResponse
      */
     public function deleteShipment(DeleteShipmentRequest $shipmentRequest);
 

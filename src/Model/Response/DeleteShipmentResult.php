@@ -4,7 +4,7 @@
 namespace DHLClient\Model\Response;
 
 
-class DeleteShipmentResponse
+class DeleteShipmentResult
 {
     /** @var string */
     private $id;
