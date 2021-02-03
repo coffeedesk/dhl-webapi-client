@@ -2,7 +2,7 @@
 
 namespace DHLClient\Model;
 
-class createShipmentResponse
+class CreateShipmentResponse
 {
 
     /**
